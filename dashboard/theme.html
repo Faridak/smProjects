@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dashboard/css/style.css">
+    <title>theme change</title>
+</head>
+<body>
+    <section class="sec">
+        <video autoplay muted loop>
+            <source src="/dashboard/ux.mp4">
+        </video>
+        <h2>RUN</h2>
+        <div class="dot"></div>
+    </section>
+
+
+    <Script>
+        //add active class on click
+        const dot = document.querySelector('.dot');
+        const sec = document.querySelector('.sec');
+        dot.onclick=function(){
+            dot.classList.toggle('active')
+            sec.classList.toggle('active')
+        }
+
+
+        document.addEventListener('mousemove', function(e){
+            const dot = document.querySelector('.dot');
+            dot.style.left = e.pageX + 'px';
+            dot.style.top = e.pageY +'px';
+        })
+    </Script>
+</body>
+</html>
