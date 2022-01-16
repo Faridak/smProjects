@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/effect/3d rotating image/style.css">
+    <title>3D rotating</title>
+    <style>
+
+    #neonShadow{
+        height:50px;
+        width:100px;
+        margin-right:80px;
+        margin-bottom: 300%;
+        border:none;
+        border-radius:50px;
+        transition:0.3s;
+        background-color:rgba(156, 161, 160,0.3);
+        animation: glow 1s infinite ;
+        transition:0.5s;
+    }
+    .bt{
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        padding-top: 15%;
+        padding-right: 2.5%;
+        margin-right: 0px;
+        font-size: 1.2rem;
+        transition: 0.3s;
+        opacity: 0;
+        }
+    .bt:hover{
+        transition: 0.3s;
+        opacity: 1;
+        font-weight: 700;
+        }
+    
+    #neonShadow:hover{
+      transform:translateX(-20px)rotate(30deg);
+      border-radius:5px;
+      background-color:#c3bacc;
+      transition:0.5s;
+    }
+    
+    @keyframes glow{
+      0%{
+      box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168);}
+      
+      50%{
+      box-shadow: 5px 5px 20px rgb(81, 224, 210),-5px -5px 20px rgb(81, 224, 210)
+      }
+      100%{
+      box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168)
+      }
+    }
+    
+    </style>
+</head>
+<body>
+    <div>
+    <button id="neonShadow"><a href="/index.html"><span class="bt">Home &larrhk; </span></a></button>
+</div>
+    <div class="box">
+        <span style="--i:1"><img src="/effect/3d rotating image/img/1.png"></span>
+        <span style="--i:2"><img src="/effect/3d rotating image/img/2.jpg"></span>
+        <span style="--i:3"><img src="/effect/3d rotating image/img/3.jpg"></span>
+        <span style="--i:4"><img src="/effect/3d rotating image/img/4.jpg"></span>
+        <span style="--i:5"><img src="/effect/3d rotating image/img/5.jpg"></span>
+        <span style="--i:6"><img src="/effect/3d rotating image/img/6.jpg"></span>
+        <span style="--i:7"><img src="/effect/3d rotating image/img/7.jpg"></span>
+        <span style="--i:8"><img src="/effect/3d rotating image/img/8.jpg"></span>
+    </div>
+    
+</body>
+</html>
