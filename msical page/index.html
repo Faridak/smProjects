@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/msical page/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="/msical page/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <title>Musical intro</title>
+    <style>
+            
+      #neonShadow{
+          height:50px;
+          width:100px;
+          margin: 40px;
+          border:none;
+          border-radius:50px;
+          transition:0.3s;
+          background-color:rgba(156, 161, 160,0.3);
+          animation: glow 1s infinite ;
+          transition:0.5s;
+      }
+      .bt{
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 700;
+          padding-top: 15%;
+          padding-right: 2.5%;
+          margin-right: 0px;
+          font-size: 1.2rem;
+          transition: 0.3s;
+          opacity: 0;
+          }
+      .bt:hover{
+          transition: 0.3s;
+          opacity: 1;
+          font-weight: 700;
+          }
+      
+      #neonShadow:hover{
+        transform:translateX(-20px)rotate(30deg);
+        border-radius:5px;
+        background-color:#c3bacc;
+        transition:0.5s;
+      }
+      
+      @keyframes glow{
+        0%{
+        box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168);}
+        
+        50%{
+        box-shadow: 5px 5px 20px rgb(81, 224, 210),-5px -5px 20px rgb(81, 224, 210)
+        }
+        100%{
+        box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168)
+        }
+      }
+      
+          </style>
+</head>
+<body>
+  <header id="header">
+    <h1 id="title"></h1>
+    <div id="controls">
+        <div class="btn" id="btn-wave">
+          <i class="fa fa-exchange"></i>
+        </div>
+        <div class="btn" id="btn-lights">
+          <i class="fa fa-sun-o"></i>
+        </div>
+        <div class="btn" id="btn-prev">
+          <i class="fa fa-backward"></i>
+        </div>
+        <div class="btn" id="btn-play">
+          <i class="fa fa-play"></i>
+        </div>
+        <div class="btn" id="btn-next">
+          <i class="fa fa-forward"></i>
+        </div>
+        <div class="btn" id="btn-volume">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div>
+    <button id="neonShadow"><a href="/index.html"><span class="bt">Home &larrhk; </span></a></button>
+  </div>
+</header>
+<div>
+  
+</div>
+<div id="background"></div>
+<div id="loader">
+    <div id="spinner"></div>
+    <h2 id="loading-text">Loading...</h2>
+</div>
+<canvas id="glow-layer"></canvas>
+<canvas id="canvas"></canvas>
+<audio id="audio"></audio>
+<div id="progress-bar"></div>
+<a class="make-google-happy-button">Click to Start</a>
+
+
+<script src="/msical page/js/js.js"></script>
+<script src="/msical page/js/vector.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
+
+</body>
+
+</html>

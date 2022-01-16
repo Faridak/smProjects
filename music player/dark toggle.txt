@@ -1,0 +1,3 @@
+this is a music player, html, css and js
+
+a file named data.js. This file contain our music related data.
