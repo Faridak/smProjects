@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watches</title>
+    <link rel="stylesheet" href="/watches bg change/style.css">
+    <style>
+            
+        #neonShadow{
+            height:50px;
+            width:100px;
+            margin-right: 20px;
+            margin-bottom: 60%;
+            border:none;
+            border-radius:50px;
+            transition:0.3s;
+            background-color:rgba(156, 161, 160,0.3);
+            animation: glow 1s infinite ;
+            transition:0.5s;
+        }
+        span.bt{
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            padding-top: 15%;
+            padding-right: 2.5%;
+            margin-right: 0px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            opacity: 0;
+            }
+        span.bt:hover{
+            transition: 0.3s;
+            opacity: 1;
+            font-weight: 700;
+            }
+        
+        #neonShadow:hover{
+          transform:translateX(-20px)rotate(30deg);
+          border-radius:5px;
+          background-color:#bf97e7;
+          transition:0.5s;
+        }
+        
+        @keyframes glow{
+          0%{
+          box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168);}
+          
+          50%{
+          box-shadow: 5px 5px 20px rgb(81, 224, 210),-5px -5px 20px rgb(81, 224, 210)
+          }
+          100%{
+          box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168)
+          }
+        }
+        
+            </style>
+ 
+</head>
+<body>
+<div>
+    <button onclick="window.location.href='/index.html';">Click Here</button>
+    </div>
+    <div class="container">
+
+        <div class="nav">
+            <span class="one active" onclick="changeColor(event)"></span>
+            <i class="one"></i>
+            <span class="two"  onclick="changeColor(event)"></span>
+            <i class="two"></i>
+            <span class="three" onclick="changeColor(event)"></span>
+            <i class="three"></i>
+            <span class="four" onclick="changeColor(event)"></span>
+            <i class="four"></i>
+            <img src="/watches bg change/img/watches.png">
+        </div>
+    </div>
+
+
+    <script>
+        function changeColor(event){
+            //reset and remove active class first
+            document.querySelectorAll('span.active').forEach(function(item){
+                item.classList.remove('active')
+            })
+            
+            // add active class to selected item
+            event.target.classList.add('active')
+
+        }
+       
+    </script>
+</body>
+</html>
